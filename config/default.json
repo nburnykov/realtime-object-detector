@@ -1,0 +1,65 @@
+{
+  "DIR_TEMP": "temp",
+  "DIR_MODEL": "model_data",
+  "MEMCACHE_IP": "127.0.0.1:11211",
+  "MEMCACHE_CAPTURE_KEY": "capture",
+  "MEMCACHE_DETECTION_KEY": "detection",
+  "MEMCACHE_DETECTION_TIME_KEY": "detection_time",
+  "MEMCACHE_AUGMENTATION_KEY": "result",
+  "MEMCACHE_KEY_TIMEOUT": 10,
+  "RTSP_CAM_LOGIN": "admin",
+  "RTSP_CAM_PASSWORD": "qwerty12345",
+  "RTSP_CAM_IP": "10.171.18.13",
+  "RTSP_CAM_PORT": "554",
+  "RTSP_CAM_CONNECTION_STRING": "rtsp://{RTSP_CAM_LOGIN}:{RTSP_CAM_PASSWORD}@{RTSP_CAM_IP}:{RTSP_CAM_PORT}/Streaming/Channels/101",
+  "CAPTURE_SLEEP": 0,
+  "CAPTURE_SAVE_RESULT": false,
+  "DETECTOR_SLEEP": 0,
+  "DETECTOR_SAVE_RESULT": false,
+  "AUGMENT_BBOX_COLOR": [
+    0,
+    255,
+    0
+  ],
+  "AUGMENT_BBOX_TEXT_COLOR": [
+    0,
+    255,
+    0
+  ],
+  "AUGMENT_SLEEP": 0.05,
+  "AUGMENT_SAVE_RESULT": false,
+  "NO_DATA_PAUSE": 2,
+  "LOGGING_CONF": {
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+      "default": {
+        "format": "{asctime} | {name} | {module} | {levelname} | {message}",
+        "style": "{"
+      }
+    },
+    "handlers": {
+      "console": {
+        "level": "WARNING",
+        "class": "logging.StreamHandler",
+        "formatter": "default"
+      }
+    },
+    "loggers": {
+      "tf_yolo_flask": {
+        "handlers": [
+          "console"
+        ],
+        "level": "INFO",
+        "propagate": false
+      }
+    },
+    "root": {
+      "level": "ERROR",
+      "handlers": [
+        "console"
+      ],
+      "propagate": true
+    }
+  }
+}
